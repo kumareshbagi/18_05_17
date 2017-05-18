@@ -1,30 +1,4 @@
-<?php  //Start the Session
-session_start();
-include_once 'conn.php';
-$name = $_POST['name'];
-$password = $_POST['password'];
-    //echo $name;
-//    echo $password;
-//if (isset($_POST['login'])) {
 
-    //$email = mysqli_real_escape_string($conn, $_POST['name']);
-   // $password = mysqli_real_escape_string($conn, $_POST['password']);
-$sql1 = "SELECT * FROM ADMIN WHERE `NAME` = '$name' and PASSWORD = '$password'";
-    $result =mysqli_query($conn,$sql1);
-
-    if ($row = mysqli_fetch_assoc($result)) {
-       
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['name'] = $row['fname'];
-        echo "Login Successfully";
-       
-       
-    }
-else {
-        echo "";
-    }
-//}
-?>
 <html>
     <h2>
     Register events: 
