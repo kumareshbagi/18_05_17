@@ -81,11 +81,11 @@
 	$sql = mysqli_query($conn,"INSERT INTO BOOKING (ID,EID,NOOFTICKETS,PRICE) VALUES ($userid,$var,$tnum,$Total)");
 $sql = mysqli_query($conn,"UPDATE EVENTS SET NOOFSEATS=NOOFSEATS-$tnum WHERE EID=$var");
 		echo "Hey congratulations!<br />";
-		 echo $uname;
-		echo "<br />";
+		 //echo $uname;
+		//echo "<br />";
 	echo "Yor tickets are reserved.Thank you for Booking!<br />";
-	echo "Total Price is: ";
-	echo $Total;
+	//echo "Total Price is: ";
+	//echo $Total;
 		}
 	
 	?>
@@ -93,6 +93,6 @@ $sql = mysqli_query($conn,"UPDATE EVENTS SET NOOFSEATS=NOOFSEATS-$tnum WHERE EID
 		<br>
 		<br>
 		<br>
-		<a href="logout.php">logout</a>
+		<a href="ticket.php">ticket</a>
 </body>
 </html>
